@@ -1,0 +1,13 @@
+{
+  "collectCoverage": true,
+  "collectCoverageFrom": ["src/**/*.{js,jsx}"],
+  "coverageDirectory": "coverage",
+  "testEnvironment": "jsdom",
+  "moduleNameMapper": {
+    "^@components/(.*)$": "<rootDir>/src/components/$1"
+  },
+  "transform": {
+    "^.+\\.(js|jsx)$": "babel-jest",
+    "^.+\\.scss$": "jest-transform-stub"
+  }
+}

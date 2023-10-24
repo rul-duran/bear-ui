@@ -17,7 +17,15 @@ module.exports = {
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-  settings: { react: { version: '18.2' } },
+  settings: {
+    react: { version: '18.2' },
+    'import/resolver': {
+      alias: {
+        map: [['@components', './src/components']],
+        extensions: ['.js', '.jsx']
+      },
+    },
+  },
   plugins: [
     'react-refresh',
     'prettier',
@@ -37,6 +45,8 @@ module.exports = {
     ],
     'max-len': ['error', {'code': 80, 'ignoreUrls': true}],
     'eol-last': ['error', 'always'],
-    'prettier/prettier': ['error']
+    'prettier/prettier': ['error'],
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-uses-react': 'off',
   },
 }
