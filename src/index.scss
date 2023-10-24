@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Onest';
+    font-style: normal;
+    src: url('/src/assets/fonts/onest.ttf') format('truetype');
+}
+
+html, body, button {
+    font-family: 'Onest';
+}
